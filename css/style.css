@@ -1,0 +1,321 @@
+:root {
+    --bg: #0f0e0d;
+    --card: #1a1917;
+    --surface: #24221f;
+    --border: #3a3732;
+    --text: #e8e3d8;
+    --muted: #8a8578;
+    --primary: #d4a054;
+    --primary-dim: #8a6838;
+    --success: #5fa058;
+    --danger: #c75450;
+    --radius: 6px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin: 0 0 0.5rem;
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin: 0 0 1rem;
+    color: var(--primary);
+}
+
+.subtitle {
+    color: var(--muted);
+    font-style: italic;
+    margin: 0 0 2.5rem;
+    font-size: 1rem;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.card.locked {
+    opacity: 0.4;
+    filter: grayscale(0.6);
+}
+
+.card.solved {
+    border-color: var(--success);
+}
+
+.card .num {
+    color: var(--primary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    margin: 0 0 0.75rem;
+    color: var(--text);
+    font-size: 1.15rem;
+}
+
+.card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.card-status {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--success);
+    font-weight: 600;
+}
+
+a.card, a.card:hover {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+body.loading .card:not(#card-63),
+body.loading .footer {
+    display: none !important;
+}
+
+a.card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.card.locked-link {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.puzzle-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.puzzle-text p {
+    margin: 0 0 1rem;
+}
+
+.puzzle-text strong {
+    color: var(--primary);
+}
+
+form {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+input[type=text] {
+    flex: 1;
+    padding: 0.9rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+button {
+    padding: 0.9rem 1.5rem;
+    background: var(--primary);
+    color: var(--bg);
+    border: none;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+button:hover { background: #e0b068; }
+button:disabled { background: var(--primary-dim); cursor: wait; }
+
+.feedback {
+    margin-top: 1.25rem;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    display: none;
+}
+
+.feedback.show { display: block; }
+.feedback.ok { background: rgba(95, 160, 88, 0.15); border: 1px solid var(--success); color: var(--success); }
+.feedback.err { background: rgba(199, 84, 80, 0.15); border: 1px solid var(--danger); color: var(--danger); }
+
+.nav {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.nav a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.nav a:hover { color: var(--primary); }
+
+.reveal-content {
+    background: var(--card);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-top: 1.5rem;
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: var(--text);
+    box-shadow: 0 0 40px rgba(212, 160, 84, 0.15);
+}
+
+.credentials-box {
+    background: var(--surface);
+    border: 1px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 0 30px rgba(212, 160, 84, 0.1);
+}
+
+.credentials-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: Georgia, serif;
+}
+
+.cred-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cred-row:last-child {
+    border-bottom: none;
+}
+
+.cred-label {
+    min-width: 90px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.cred-value {
+    flex: 1;
+    background: var(--bg);
+    padding: 0.5rem 0.85rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: var(--text);
+    border: 1px solid var(--border);
+    user-select: all;
+    word-break: break-all;
+}
+
+.cred-copy {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.5rem 0.85rem;
+    border-radius: 3px;
+    font-family: Georgia, serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: background 0.15s, color 0.15s;
+    flex-shrink: 0;
+}
+
+.cred-copy:hover {
+    background: var(--primary);
+    color: var(--bg);
+}
+
+@media (max-width: 560px) {
+    .cred-row {
+        flex-wrap: wrap;
+    }
+    .cred-label {
+        min-width: 100%;
+    }
+    .cred-value {
+        flex: 1 1 calc(100% - 80px);
+    }
+}
+
+.hint {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.hint code {
+    background: var(--surface);
+    padding: 0.15em 0.45em;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.88em;
+    color: var(--text);
+    font-style: normal;
+    margin: 0 0.1em;
+}
+
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+}

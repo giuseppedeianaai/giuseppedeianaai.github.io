@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Enigma III — Quattro carte</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="puzzle">
+<main>
+    <div class="num" style="color: var(--primary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.5rem;">Enigma III</div>
+    <h1>Quattro carte e una regola</h1>
+
+    <div class="puzzle-text">
+        <p>Quattro carte sono sul tavolo, mostrando: <strong>A, K, 3, 8</strong>.</p>
+        <p>Ogni carta ha una lettera su un lato e un numero sull'altro. Ti viene proposta questa regola:</p>
+        <p><em>"Se una carta ha una vocale su un lato, allora ha un numero pari sull'altro lato."</em></p>
+        <p>Quali carte (e solo quelle strettamente necessarie) devi girare per <strong>verificare se la regola è vera</strong>?</p>
+    </div>
+
+    <form id="answer-form" autocomplete="off">
+        <input type="text" id="answer-input" placeholder="Le carte separate da virgola (es: A,K)" autofocus>
+        <button type="submit">Verifica</button>
+    </form>
+    <p class="hint">Scrivi solo le lettere/numeri delle carte, separate come preferisci (virgole, spazi, "e"). L'ordine non conta. Esempi di formato valido: <span id="format-examples"></span></p>
+    <div id="feedback" class="feedback"></div>
+
+    <div class="nav">
+        <a href="../index.html">← Torna all'indice</a>
+    </div>
+</main>
+<script>
+window.PUZZLE_ID = '80';
+window.PUZZLE_EXAMPLES = ["K,8", "A,K", "3,8", "A e K", "K 8", "3,K", "A,8", "K e 8"];
+</script>
+<script src="../js/app.js"></script>
+</body>
+</html>

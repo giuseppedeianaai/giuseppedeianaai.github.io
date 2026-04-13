@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Giuseppe Deiana — Enigmi</title>
+    <link rel="preconnect" href="https://sol.massimilianopili.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        window.progressPromise = fetch('https://sol.massimilianopili.com/apps/puzzle-verify/progress')
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .catch(function () { return null; });
+    </script>
+</head>
+<body data-page="index" class="loading">
+<main>
+    <h1>Auguriii Giuseee</h1>
+
+    <p>Quando avrai completato gli enigmi, si aprirà l'ultima pagina.</p>
+    <p>Non c'è limite di tempo. Non c'è punteggio. C'è solo una soluzione per ciascuno.</p>
+
+    <a class="card" id="card-63" href="puzzle/63.html">
+        <div class="num">Enigma I</div>
+        <h3>Il cowboy e i colpi di pistola</h3>
+        <p>Una trappola percettiva sul tempo. Tre righe, una risposta in secondi.</p>
+        <div class="card-status"></div>
+    </a>
+
+    <a class="card" id="card-59" href="puzzle/59.html">
+        <div class="num">Enigma II</div>
+        <h3>I tre cavalli più veloci</h3>
+        <p>Venticinque cavalli, una pista, nessun cronometro. Quanti giri servono?</p>
+        <div class="card-status"></div>
+    </a>
+
+    <a class="card" id="card-80" href="puzzle/80.html">
+        <div class="num">Enigma III</div>
+        <h3>Quattro carte e una regola</h3>
+        <p>Logica formale. Quali carte vanno girate per falsificare una proposizione?</p>
+        <div class="card-status"></div>
+    </a>
+
+    <a class="card" id="card-reveal" href="reveal.html">
+        <div class="num">Finale</div>
+        <h3>Il messaggio</h3>
+        <p>Accessibile solo dopo aver risolto gli enigmi.</p>
+        <div class="card-status"></div>
+    </a>
+
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>

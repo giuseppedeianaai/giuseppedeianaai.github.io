@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Enigma II — I tre cavalli</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="puzzle">
+<main>
+    <div class="num" style="color: var(--primary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.5rem;">Enigma II</div>
+    <h1>I tre cavalli più veloci</h1>
+
+    <div class="puzzle-text">
+        <p>Hai <strong>25 cavalli</strong> e una pista che permette di far correre 5 cavalli alla volta. Non hai un cronometro: puoi solo vedere l'ordine di arrivo in ogni gara.</p>
+        <p>Qual è il <strong>numero minimo di gare</strong> necessario per determinare con certezza i tre cavalli più veloci?</p>
+    </div>
+
+    <form id="answer-form" autocomplete="off">
+        <input type="text" id="answer-input" placeholder="La tua risposta" autofocus>
+        <button type="submit">Verifica</button>
+    </form>
+    <p class="hint">Inserisci un numero. L'unità di misura è opzionale. Esempi di formato valido: <span id="format-examples"></span></p>
+    <div id="feedback" class="feedback"></div>
+
+    <div class="nav">
+        <a href="../index.html">← Torna all'indice</a>
+    </div>
+</main>
+<script>
+window.PUZZLE_ID = '59';
+window.PUZZLE_EXAMPLES = ["3", "10 gare", "5", "12", "15 gare", "8", "25", "4 gare", "6"];
+</script>
+<script src="../js/app.js"></script>
+</body>
+</html>
